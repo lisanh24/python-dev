@@ -155,3 +155,7 @@ from sympy import pprint
 # print(sen)
 
 # matching regex objects
+import re
+phonenumber = re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+mo = phonenumber.search("My number is 112-551-4242")
+print('Phone number found: '+mo.group())
